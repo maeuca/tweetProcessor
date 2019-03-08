@@ -1,7 +1,7 @@
 # tweetProcessor
 
 ### Install
-git clone <repo>
+git clone git@github.com:maeuca/tweetProcessor.git or download zip
   
 npm install
 
