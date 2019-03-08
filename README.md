@@ -9,9 +9,9 @@ npm run build
 
 npm start
 
-View Report @http://localhost:3001/twitter/tweets/report
+View Report - @http://localhost:3001/twitter/tweets/report
 
-Rest Api import test/postman/collection into postman to see report.json
+Rest Api - import test/postman/collection into postman to see request for report.json
 
 
 ## Summary
