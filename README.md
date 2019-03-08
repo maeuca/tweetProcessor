@@ -2,8 +2,11 @@
 
 ### Install
 git clone <repo>
+  
 npm install
+
 npm run build
+
 npm start
 
 View Report @http://localhost:3001/twitter/tweets/report
