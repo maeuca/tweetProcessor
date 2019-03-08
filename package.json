@@ -1,0 +1,111 @@
+{
+  "name": "@mcantrell/tweetprocessor",
+  "version": "1.0.0",
+  "description": "Process Twitter Stream",
+  "main": "dist/index.js",
+  "author": "Mark Cantrell",
+  "license": "ISC",
+  "scripts": {
+    "compile": "babel src -d dist && npm run copy",
+    "start": "cross-env DEBUG=app:* node dist/main.js",
+    "start-debug": "cross-env DEBUG=app:* babel-node %NODE_DEBUG_OPTION% src/main.js",
+    "start-watch": "cross-env DEBUG=app:* babel-watch src/main.js",
+    "processor": "cross-env DEBUG=app:* node dist/lib/processor.js",
+    "copy": "copyfiles -f src/lib/*.json dist/lib",
+    "jest": "cross-env NODE_ENV=auto jest --forceExit",
+    "jest-debug": "cross-env NODE_ENV=auto DEBUG=app:*,test:* jest",
+    "pretest": "xo src",
+    "test": "npm run jest",
+    "prebuild": "npm run test",
+    "build": "babel src -d dist && npm run copy",
+    "pack": "npm pack"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "config": "^3.0.1",
+    "copyfiles": "^2.1.0",
+    "cors": "^2.8.5",
+    "cross-env": "^5.2.0",
+    "cuid": "^2.1.6",
+    "debug": "^4.1.1",
+    "express": "^4.16.4",
+    "express-correlation-id": "^1.2.1",
+    "helmet": "^3.15.1",
+    "joi": "^14.3.1",
+    "lodash": "^4.17.11",
+    "twit": "^2.2.11",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-watch": "^2.0.7",
+    "eslint-plugin-jest": "^21.17.0",
+    "eslint-plugin-monorepo": "^0.2.0",
+    "jest": "^23.5.0",
+    "xo": "^0.20.3"
+  },
+  "jest": {
+    "testRegex": "test/jest/.*\\.js$",
+    "testPathIgnorePatterns": [
+      "test/jest/config/",
+      "test/jest/regression/"
+    ],
+    "verbose": true,
+    "testURL": "http://localhost/"
+  },
+  "xo": {
+    "space": true,
+    "semicolon": false,
+    "extends": [
+      "plugin:jest/recommended"
+    ],
+    "rules": {
+      "capitalized-comments": "off",
+      "import/prefer-default-export": "off",
+      "linebreak-style": "off",
+      "new-cap": "off",
+      "no-console": "error",
+      "no-unused-expressions": [
+        "error",
+        {
+          "allowShortCircuit": true,
+          "allowTernary": true
+        }
+      ],
+      "radix": "off"
+    }
+  },
+  "eslintConfig": {
+    "extends": "xo",
+    "rules": {
+      "indent": [
+        2,
+        2,
+        {
+          "FunctionExpression": {
+            "body": 1
+          },
+          "SwitchCase": 1
+        }
+      ],
+      "space": 0,
+      "semi": 0,
+      "capitalized-comments": "off",
+      "import/prefer-default-export": "off",
+      "linebreak-style": "off",
+      "new-cap": "off",
+      "no-console": "error",
+      "no-unused-expressions": [
+        "error",
+        {
+          "allowShortCircuit": true,
+          "allowTernary": true
+        }
+      ],
+      "radix": "off"
+    }
+  }
+}

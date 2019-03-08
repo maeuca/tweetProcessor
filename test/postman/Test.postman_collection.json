@@ -1,0 +1,34 @@
+{
+	"info": {
+		"_postman_id": "62bab8ed-f5a3-4088-8bb5-5d735e548185",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Twitter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3001/twitter/tweets/report",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"twitter",
+						"tweets",
+						"report"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
