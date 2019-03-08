@@ -11,6 +11,9 @@ npm start
 
 View Report @http://localhost:3001/twitter/tweets/report
 
+Rest Api import test/postman/collection into postman to see report.json
+
+
 ## Summary
 The Twitter Streaming API provides real-time access to public tweets. In this assignment you will build an application that connects to the Streaming API and processes incoming tweets to compute various statistics. We'd like to see this as a NodeJS project, but otherwise feel free to use any libraries you want to accomplish this task.
 
