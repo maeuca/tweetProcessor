@@ -2,7 +2,7 @@
   "name": "@mcantrell/tweetprocessor",
   "version": "1.0.0",
   "description": "Process Twitter Stream",
-  "main": "dist/index.js",
+  "main": "dist/main.js",
   "author": "Mark Cantrell",
   "license": "ISC",
   "scripts": {
